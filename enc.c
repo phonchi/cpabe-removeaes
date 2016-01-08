@@ -98,8 +98,8 @@ main( int argc, char** argv )
 	GByteArray* plt;
 	GByteArray* cph_buf;
 	element_t m;
-        unsigned char* key;
-        unsigned char iv[10];
+        unsigned char key[16];
+        unsigned char iv[16];
 	FILE *fp;
         int i;
 
@@ -132,11 +132,12 @@ main( int argc, char** argv )
             printf("open fail");
             return 1;
         }else{
-            for(i=0; i<10; i++)
+            for(i=0; i<16; i++)
                 fprintf(fp,"%02X", key[i]);
             fprintf(fp,"\n");
-            for(i=0; i<10; i++)                    
+            for(i=0; i<16; i++)                    
                 fprintf(fp,"%02X", iv[i]);             
+            fprintf(fp,"\n");
         }
         fclose(fp);
 

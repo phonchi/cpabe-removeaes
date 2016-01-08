@@ -19,12 +19,13 @@ void
 init_cipher( element_t k,unsigned char* key, unsigned char* iv )
 {
   int key_len;
+  unsigned char* tmp;
 
-  key_len = element_length_in_bytes(k) < 11 ? 11 : element_length_in_bytes(k);
-  key = (unsigned char*) malloc(key_len);
-  element_to_bytes(key, k);
-
-  memset(iv, 0, 10);
+  key_len = element_length_in_bytes(k) < 32 ? 32 : element_length_in_bytes(k);
+  tmp = (unsigned char*) malloc(key_len);
+  element_to_bytes(tmp, k);
+  memcpy(key, tmp, 16);
+  memcpy(iv, tmp+16, 16);
 }
 
 
