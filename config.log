@@ -332,7 +332,7 @@ configure:4643: $? = 0
 configure:4665: result: yes
 configure:4674: checking for _doprnt
 configure:4730: gcc -o conftest -O3 -Wall  -O3 -Wall conftest.c  >&5
-/tmp/ccJ0yEzs.o: In function `main':
+/tmp/ccgbhpCW.o: In function `main':
 conftest.c:(.text+0x7): undefined reference to `_doprnt'
 collect2: ld returned 1 exit status
 configure:4737: $? = 1

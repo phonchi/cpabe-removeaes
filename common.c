@@ -128,7 +128,7 @@ void read_cpabe_file( char* file,    GByteArray** cph_buf, int* file_len )
 	*file_len = 0;
 	for( i = 3; i >= 0; i-- )
 		*file_len |= fgetc(f)<<(i*8);
-	printf("filelength:%d", *file_len);
+	//printf("filelength:%d", *file_len);
 	/* read aes buf */
 	/*len = 0;
 	for( i = 3; i >= 0; i-- )
@@ -153,7 +153,7 @@ write_cpabe_file( char* file, GByteArray* cph_buf, int file_len )
 	int i;
 
 	f = fopen_write_or_die(file);
-	printf("filelength:%d", file_len);
+	//printf("filelength:%d", file_len);
 	/* write real file len as 32-bit big endian int */
 	for( i = 3; i >= 0; i-- )
 		fputc((file_len & 0xff<<(i*8))>>(i*8), f);

@@ -353,7 +353,7 @@ Copyright (C) 2008 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/Si2_RAID-1/si2/100/phonchi/00_Lib/cpabe-removeaes'
+ac_pwd='/Si2_RAID-1/si2/100/phonchi/00_Lib/git/cpabe-removeaes'
 srcdir='.'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.

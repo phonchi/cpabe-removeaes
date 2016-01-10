@@ -5,13 +5,13 @@ bindir = ${exec_prefix}/bin
 mandir = ${prefix}/share/man
 
 CC = gcc
-CFLAGS  =  -Wall -g\
+CFLAGS  = -O3 -Wall \
 	-I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include   \
 	-I/Si2_RAID-1/si2/100/phonchi/.local/include \
 	-I/Si2_RAID-1/si2/100/phonchi/.local/include/pbc \
 	-I/Si2_RAID-1/si2/100/phonchi/.local/include \
 	-DPACKAGE_NAME=\"cpabe\" -DPACKAGE_TARNAME=\"cpabe\" -DPACKAGE_VERSION=\"0.11\" -DPACKAGE_STRING=\"cpabe\ 0.11\" -DPACKAGE_BUGREPORT=\"bethenco@cs.berkeley.edu\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_FCNTL_H=1 -DHAVE_STDDEF_H=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DLSTAT_FOLLOWS_SLASHED_SYMLINK=1 -DHAVE_VPRINTF=1 -DHAVE_LIBCRYPTO=1 -DHAVE_LIBCRYPTO=1 -DHAVE_STRCHR=1 -DHAVE_STRDUP=1 -DHAVE_MEMSET=1 -DHAVE_GMP=1 -DHAVE_PBC=1 -DHAVE_BSWABE=1
-LDFLAGS =  -Wall -g\
+LDFLAGS = -O3 -Wall \
 	-lglib-2.0   \
 	-L/Si2_RAID-1/si2/100/phonchi/.local/lib -Wl,-rpath /Si2_RAID-1/si2/100/phonchi/.local/lib -Wl,-rpath /usr/local/lib -lgmp \
 	-L/Si2_RAID-1/si2/100/phonchi/.local/lib -Wl,-rpath /Si2_RAID-1/si2/100/phonchi/.local/lib -Wl,-rpath /usr/local/lib -lpbc \
