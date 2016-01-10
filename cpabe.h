@@ -20,8 +20,6 @@ char* suck_file_str( char* file );
 char* suck_stdin();
 void die(char* fmt, ...);
 
-GByteArray* aes_128_cbc_encrypt( GByteArray* pt, element_t k );
-GByteArray* aes_128_cbc_decrypt( GByteArray* ct, element_t k );
 
 
 #define CPABE_VERSION PACKAGE_NAME "%s " PACKAGE_VERSION "\n" \
